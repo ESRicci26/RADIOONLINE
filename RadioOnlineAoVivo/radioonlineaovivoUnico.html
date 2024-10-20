@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Player de Rádio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+    }
+    .container {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    select, button {
+      padding: 10px;
+      margin-top: 10px;
+      font-size: 16px;
+    }
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Player de Rádio Online SP</h1>
+  <label for="radioSelect">Selecione uma rádio:</label>
+  <select id="radioSelect">
+    <option value="https://www.radio-ao-vivo.com/antena-1">Antena 1</option>
+    <option value="https://www.radio-ao-vivo.com/cbn-sp">CBN SP</option>
+    <option value="https://www.radio-ao-vivo.com/alpha-fm-sp">Alpha FM</option>
+    <option value="https://www.radio-ao-vivo.com/mix-fm-sao-paulo">Mix FM São Paulo</option>
+    <option value="https://www.radio-ao-vivo.com/jovem-pan-sp">Jovem Pan SP</option>
+    <option value="https://www.radio-ao-vivo.com/radio-motel">Rádio Motel</option>
+    <option value="https://www.radio-ao-vivo.com/nativa-fm-sp">Nativa FM SP</option>
+    <option value="https://www.radio-ao-vivo.com/gazeta-fm">Gazeta FM</option>
+    <option value="https://www.radio-ao-vivo.com/89-fm">89 FM</option>
+    <option value="https://www.radio-ao-vivo.com/radio-metropolitana-fm">Rádio Metropolitana FM</option>
+    <option value="https://www.radio-ao-vivo.com/bandnews-sp">BandNews SP</option>
+    <option value="https://www.radio-ao-vivo.com/transamerica-pop-sp">Transamérica Pop SP</option>
+    <option value="https://www.radio-ao-vivo.com/radio-bandeirantes">Rádio Bandeirantes</option>
+    <option value="https://www.radio-ao-vivo.com/jovem-pan-news">Jovem Pan News</option>
+  </select>
+
+  <button id="playBtn">Tocar Rádio</button>
+</div>
+
+<script>
+  document.getElementById('playBtn').addEventListener('click', function() {
+    var selectedRadio = document.getElementById('radioSelect').value;
+    window.open(selectedRadio, '_blank');
+  });
+</script>
+
+</body>
+</html>
